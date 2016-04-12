@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Peliculas y series </title>
+    <meta charset="utf-8">
+
+    <!-- Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+    <!--Compiled and minified AngularJS-->
+    <script src="vendor/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/IndexCtrl.js"></script>
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body ng-app="Drungap">
+  <!--Navbar-->
+  <div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper teal">
+        <a href="#" class="brand-logo center">Drungap</a>
+      </div>
+  </nav>
+  </div>
+
+  <!--Angular section-->
+  <div class="container">
+    <section ng-controller="IndexCtrl">
+        <table class="striped">
+            <tbody>
+            <tr ng-repeat="pelicula in peliculas">
+                <td>{{pelicula.title}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+  </div>
+</body>
