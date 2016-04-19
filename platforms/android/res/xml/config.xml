@@ -5,7 +5,12 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
     <allow-intent href="market:*" />
+    <preference name="StatusBarBackgroundColor" value="#009688" />
     <name>Drungap</name>
     <description>
         Aplicación para Consultar Drungap
