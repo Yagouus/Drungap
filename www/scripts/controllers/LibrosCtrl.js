@@ -4,7 +4,7 @@ angular.module("Drungap").controller("LibrosCtrl", ["$scope", "ApiService" ,func
         .consultaApi()
         .then(
             function(resultado){
-                $scope.peliculas = resultado;
+                $scope.libros = resultado.data;
             },
             function () {
                 alert("Algo no ha ido bien.");
