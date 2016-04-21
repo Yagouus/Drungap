@@ -1,6 +1,10 @@
 <table class="striped">
+    <thead>
+    <th>Catálogo</th>
+    </thead>
     <tbody>
     <tr ng-repeat="libro in libros">
+        <td><img ng-src="{{rutaImagen(libro.poster_path)}}"/></td>
         <td><a href="" ng-click="verDetalle(libro.id)">{{libro.title}}</a></td>
     </tr>
     </tbody>
