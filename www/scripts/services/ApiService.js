@@ -2,14 +2,6 @@
 angular.module("Drungap").service("ApiService", ["$http" , "settings",function ($http, settings) {
 
     this.consultaApi = function (servicio) {
-        return $http.get(settings.rutaApi
-            + settings.apiVersion + "/"
-            + servicio
-            + "?api_key=" + settings.apiKey
-            + "&language=" + settings.language)
+        return $http.get(settings.rutaApi + settings.version + servicio);
     };
-
-    this.obtenerRutaImagen = function (tamano, ruta) {
-        return ruta == null ? null : settings.rutaImagenApi  + tamano + ruta;
-    }
 }]);

@@ -1,14 +1,10 @@
-angular.module("Drungap").controller("LibrosCtrl", ["$scope", "ApiService" ,function ($scope, ApiService){
+angular.module("Drungap").controller("LibrosCtrl", ["$scope", "$location","Libros", "ApiService" ,function ($scope, $location, Libros, ApiService){
+    $scope.libros = Libros.data;
 
-    ApiService
-        .consultaApi()
-        .then(
-            function(resultado){
-                $scope.libros = resultado.data;
-            },
-            function () {
-                alert("Algo no ha ido bien.");
-            }
-        );
-
+    $scope.verDetalle = function (id) {
+        $location.path("/libros/detalles").search({
+            idLibro: id
+        });
+    };
+    
 }]);

@@ -1,7 +1,8 @@
 <table class="striped">
+    <thead>
+    <th>Catálogo</th>
+    </thead>
     <tbody>
-    <tr ng-repeat="libro in libros">
-        <td>{{libro.title}}</td>
-    </tr>
+    <tr ng-repeat="libro in libros" item datos="libro" al-seleccionar="verDetalle(mediaId)"></tr>
     </tbody>
 </table>

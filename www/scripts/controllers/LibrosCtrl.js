@@ -1,14 +1,10 @@
 angular.module("Drungap").controller("LibrosCtrl", ["$scope", "$location","Libros", "ApiService" ,function ($scope, $location, Libros, ApiService){
-    $scope.libros = Libros.data.results;
+    $scope.libros = Libros.data;
 
     $scope.verDetalle = function (id) {
         $location.path("/libros/detalles").search({
-            idPelicula: id
+            idLibro: id
         });
     };
-
-    $scope.rutaImagen = function (imagen) {
-        return ApiService.obtenerRutaImagen(45, imagen)
-    };
-
+    
 }]);
