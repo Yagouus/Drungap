@@ -21,6 +21,8 @@
         <allow-intent href="market:*" />
         <!--Color navbar-->
         <preference name="StatusBarBackgroundColor" value="#009688" />
+        <!--Icon-->
+        <icon src="res/android/xhdpi.png" density="xhdpi" />
     </platform>
     <platform name="ios">
         <access origin="*" />

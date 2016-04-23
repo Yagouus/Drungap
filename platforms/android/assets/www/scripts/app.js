@@ -33,7 +33,7 @@ angular.module("Drungap").config(["$routeSegmentProvider", "$routeProvider", "$h
         templateUrl:"views/LibrosDetalles.html",
         resolve: {
             Libro: ["ApiService", "$routeParams", function (ApiService, $routeParams) {
-                return ApiService.consultaApi("books/" + $routeParams.idLibro);
+                return ApiService.consultaApi("/books?title=" + $routeParams.idLibro);
             }]
         }
     });

@@ -1,10 +1,60 @@
-<h4 class="card-title">{{Libro.title}}</h4>
+<style>
+    img{
+        max-width:100%;
+        max-height:200px;
+    }
+</style>
 <div class="row">
+    <!--Title and poster-->
     <div class="col s12">
-        <div class="card-panel">
+        <div class="card hoverable">
+            <!--Title-->
             <div class="card-content">
-                <img class="z-depth-1" ng-src="{{rutaImagen(Libro.poster_path)}}"/>
+                <div class="row">
+                    <div class="col s12"> <h4>{{libro.title}}</h4></div>
+                </div>
+                <div class="row">
+                    <div class="col s12 l2"><img class="z-depth-1" ng-src="{{libro.field_cover}}"/></div>
+                    <div class="col s12 l10">
+                        <blockquote>
+                            <p><b>Autor: </b>{{libro.field_author}}</p>
+                        </blockquote>
+                        <a href="{{libro.field_url}}" class="btn waves-effect">Comprar </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <!--Overview-->
+    <div class="col s12">
+        <div class="card hoverable">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12"> <span class="card-title">Resumen</span></div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <p>{{libro.field_description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Genres-->
+    <div class="col s12">
+        <div class="card hoverable">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12"> <span class="card-title">Géneros</span></div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <a href='' class='chip hoverable'>{{libro.field_clasification}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
