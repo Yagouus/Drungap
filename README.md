@@ -32,3 +32,7 @@ You need to run OSX in order to compile for iOS.
 Then you need to install [XCode](https://itunes.apple.com/es/app/xcode/id497799835?mt=12) 
 
 Then, you need to configure your [developement enviroment](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html)
+
+##Advice
+If you want to try the app without need to compile you can run the HTML version that is located under /www. For this to work you'll need to run Chrome with and extension [for disabling CORS restriction](https://chrome.google.com/webstore/detail/cors-toggle/omcncfnpmcabckcddookmnajignpffnh)
+
