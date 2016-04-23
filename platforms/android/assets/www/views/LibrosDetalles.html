@@ -1,11 +1,14 @@
+<!--Style for img-->
 <style>
     img{
         max-width:100%;
         max-height:200px;
     }
 </style>
+
 <div class="row">
-    <!--Title and poster-->
+
+    <!--Title and cover-->
     <div class="col s12">
         <div class="card hoverable">
             <!--Title-->
@@ -13,13 +16,22 @@
                 <div class="row">
                     <div class="col s12"> <h4>{{libro.title}}</h4></div>
                 </div>
+
                 <div class="row">
-                    <div class="col s12 l2"><img class="z-depth-1" ng-src="{{libro.field_cover}}"/></div>
+                    <!--Cover-->
+                    <div class="col s12 l2">
+                        <img class="z-depth-1" ng-src="{{libro.field_cover}}"/>
+                    </div>
+
                     <div class="col s12 l10">
+                        <!--Author-->
                         <blockquote>
                             <p><b>Autor: </b>{{libro.field_author}}</p>
                         </blockquote>
-                        <a href="{{libro.field_url}}" class="btn waves-effect">Comprar</a>
+
+                        <!--Buy-->
+                        <a href="{{libro.field_url}}" class="btn waves-effect">Comprar </a>
+
                     </div>
                 </div>
             </div>
@@ -30,9 +42,11 @@
     <div class="col s12">
         <div class="card hoverable">
             <div class="card-content">
+                <!--Title-->
                 <div class="row">
                     <div class="col s12"> <span class="card-title">Resumen</span></div>
                 </div>
+                <!--Description-->
                 <div class="row">
                     <div class="col s12">
                         <p>{{libro.field_description}}</p>
@@ -46,9 +60,11 @@
     <div class="col s12">
         <div class="card hoverable">
             <div class="card-content">
+                <!--Title-->
                 <div class="row">
                     <div class="col s12"> <span class="card-title">Géneros</span></div>
                 </div>
+                <!--Clasification-->
                 <div class="row">
                     <div class="col s12">
                         <a href='' class='chip hoverable'>{{libro.field_clasification}}</a>
@@ -56,5 +72,6 @@
                 </div>
             </div>
         </div>
+
     </div>
 

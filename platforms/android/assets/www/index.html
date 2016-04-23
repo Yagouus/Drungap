@@ -12,16 +12,23 @@
     <script src="vendor/angular.min.js"></script>
     <script src="vendor/angular-route.js"></script>
     <script src="vendor/angular-route-segment.js"></script>
+
+    <!--App-->
     <script src="scripts/app.js"></script>
+
+    <!--Values-->
     <script src="scripts/values/Settings.js"></script>
+
+    <!--Services-->
     <script src="scripts/services/ApiService.js"></script>
+
+    <!--Controllers-->
     <script src="scripts/controllers/IndexCtrl.js"></script>
     <script src="scripts/controllers/LibrosCtrl.js"></script>
     <script src="scripts/controllers/LibrosDetallesCtrl.js"></script>
 
     <!--Directives-->
     <script src="scripts/directives/Item.js"></script>
-    <script src="scripts/directives/Genre.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
@@ -36,11 +43,14 @@
   <nav>
     <div class="nav-wrapper teal">
         <a href="#" class="brand-logo center">Drungap</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a class="btn-floating btn-large waves-effect waves-light red" href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+        </ul>
       </div>
   </nav>
   </div>
 
-  <!--Contenido-->
+  <!--Content-->
   <div class="container">
       <section app-view-segment="1"></section>
   </div>

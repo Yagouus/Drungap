@@ -4,7 +4,7 @@
     <description>
         Aplicación para Consultar Drungap
     </description>
-    <author email="yagofontenla95@gmail.com" href="http://cordova.io">
+    <author email="yagofontenla95@gmail.com" href="http://yagouus.github.io/Drungap/">
        Yago Fontenla Seco
     </author>
     <content src="index.html" />
@@ -19,16 +19,12 @@
     <platform name="android">
         <access origin="*" />
         <allow-intent href="market:*" />
-        <!--Color navbar-->
         <preference name="StatusBarBackgroundColor" value="#009688" />
-        <!--Icon-->
-        <icon src="res/android/xhdpi.png" density="xhdpi" />
-    </platform>
+     </platform>
     <platform name="ios">
         <access origin="*" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <!--Color navbar-->
         <preference name="StatusBarBackgroundColor" value="#009688" />
     </platform>
 </widget>

@@ -1,22 +1,17 @@
-//Definimos modulos
+//Modules
 angular.module("Drungap", ["ngRoute", "route-segment", "view-segment"]);
 
-//Definimos secciones
+//Sections
 angular.module("Drungap").config(["$routeSegmentProvider", "$routeProvider", "$httpProvider", function ($routeSegmentProvider, $routeProvider, $httpProvider) {
 
-    //Enable cross domain calls
-    $httpProvider.defaults.useXDomain = true;
-
-    //Remove the header used to identify ajax call  that would prevent CORS from working
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
-
+    //Routing
     $routeSegmentProvider.when("/libros/catalogo", "libros.catalogo");
     $routeSegmentProvider.when("/libros/detalles", "libros.detalles");
 
-    //Ruta por defecto
+    //Default route
     $routeProvider.otherwise("/libros/catalogo");
 
-    //Libros
+    //Books catalog
     $routeSegmentProvider.within("libros").segment("catalogo", {
         controller:"LibrosCtrl",
         templateUrl:"views/Libros.html",
@@ -27,7 +22,7 @@ angular.module("Drungap").config(["$routeSegmentProvider", "$routeProvider", "$h
         }
     });
 
-    //Detalle de un libro
+    //Book detail
     $routeSegmentProvider.within("libros").segment("detalles", {
         controller:"LibrosDetallesCtrl",
         templateUrl:"views/LibrosDetalles.html",

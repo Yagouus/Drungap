@@ -2,7 +2,4 @@ angular.module("Drungap").controller("LibrosDetallesCtrl", ["$scope", "$location
 
     $scope.libro = Libro.data[0];
 
-    $scope.rutaImagen = function (imagen) {
-        return ApiService.obtenerRutaImagen(150, imagen)
-    };
 }]);
