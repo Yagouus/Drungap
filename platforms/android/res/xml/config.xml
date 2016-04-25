@@ -10,7 +10,7 @@
         <param name="onload" value="true" />
     </feature>
     <allow-intent href="market:*" />
-    <preference name="StatusBarBackgroundColor" value="#009688" />
+    <preference name="StatusBarBackgroundColor" value="#00796B" />
     <name>Drungap</name>
     <description>
         Aplicación para Consultar Drungap

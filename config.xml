@@ -19,12 +19,12 @@
     <platform name="android">
         <access origin="*" />
         <allow-intent href="market:*" />
-        <preference name="StatusBarBackgroundColor" value="#009688" />
+        <preference name="StatusBarBackgroundColor" value="#00796B" />
      </platform>
     <platform name="ios">
         <access origin="*" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <preference name="StatusBarBackgroundColor" value="#009688" />
+        <preference name="StatusBarBackgroundColor" value="#00796B" />
     </platform>
 </widget>
